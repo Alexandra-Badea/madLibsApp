@@ -9,6 +9,8 @@ let originalStory;
 
 let userInputs = [];
 
+let numberOfQuestions = 0;
+
 originalStory = `It was a ${userInputs[0]} summer day. ${userInputs[1]} and I were 
 excited to go camping at ${userInputs[2]}. It was my first time going there. I packed my 
 favourite ${userInputs[3]}. On the road we went in our ${userInputs[4]} ${userInputs[5]} 
