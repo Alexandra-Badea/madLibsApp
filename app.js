@@ -1,23 +1,63 @@
-var http = require('http');
+// var http = require('http');
 
-http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/html'});
-  res.end('Hello World!');
-}).listen(8080);
+// http.createServer(function (req, res) {
+//   res.writeHead(200, {'Content-Type': 'text/html'});
+//   res.end('Hello World!');
+// }).listen(8080);
 
-let originalStory;
+window.onload = () => {
+    let userInputs = [];
 
-let userInputs = [];
+    let numberOfQuestions = 8;
+    let quesitonCounter = 0;
 
-let numberOfQuestions = 0;
+    
+        
+    let questionArray = ["adjective", "name", "place", "noun", "adjective", "adjective", "name", "adjective"];
+    
 
-originalStory = `It was a ${userInputs[0]} summer day. ${userInputs[1]} and I were 
-excited to go camping at ${userInputs[2]}. It was my first time going there. I packed my 
-favourite ${userInputs[3]}. On the road we went in our ${userInputs[4]} ${userInputs[5]} 
-car. We were listening to ${userInputs[6]} all the way down. The drive was about 5 hours but 
-it was worth it.`;
+    let inputPrompt = "Enter a/ an ";
 
-console.log(originalStory);
+    for (let i = 0; i < questionArray.length; i++) {
+        let answer = prompt(inputPrompt + questionArray[i]);
+        console.log(answer);
+
+        userInputs.push(answer);
+
+        quesitonCounter++;
+        numberOfQuestions--;
+
+        console.log(numberOfQuestions);
+
+        console.log("you answer is: " + userInputs[i]);
+        console.log("You answered: " + quesitonCounter + " questions");
+        console.log("You have: " + numberOfQuestions + " questions left to answer");
+
+        let originalStory = `It was a ${userInputs[0]} summer day. ${userInputs[1]} and I were 
+    excited to go camping at ${userInputs[2]}. It was my first time going there. I packed my 
+    favourite ${userInputs[3]}. On the road we went in our ${userInputs[4]} ${userInputs[5]} 
+    car. We were listening to ${userInputs[6]} all the way down. The drive was about 5 hours but 
+    it was ${userInputs[7]} it.`;
+
+        if (numberOfQuestions == 0) {
+            alert("You answered all the questions");
+            console.log(originalStory);
+
+        }
+    }
+
+
+}
+
+
+
+
+
+
+
+// console.log(inputPrompt);
+
+// console.log(originalStory);
 
 
 
