@@ -1,17 +1,9 @@
-// var http = require('http');
+function startGame() {
 
-// http.createServer(function (req, res) {
-//   res.writeHead(200, {'Content-Type': 'text/html'});
-//   res.end('Hello World!');
-// }).listen(8080);
-
-window.onload = () => {
     let userInputs = [];
 
     let numberOfQuestions = 8;
-    let quesitonCounter = 0;
-
-    
+    let quesitonCounter = 0;  
         
     let questionArray = ["adjective", "name", "place", "noun", "adjective", "adjective", "name", "adjective"];
     
@@ -19,15 +11,12 @@ window.onload = () => {
     let inputPrompt = "Enter a/ an ";
 
     for (let i = 0; i < questionArray.length; i++) {
-        let answer = prompt(inputPrompt + questionArray[i]);
-        console.log(answer);
+        let answer = prompt("Enter a/ an " + questionArray[i]);
 
         userInputs.push(answer);
 
         quesitonCounter++;
         numberOfQuestions--;
-
-        console.log(numberOfQuestions);
 
         console.log("you answer is: " + userInputs[i]);
         console.log("You answered: " + quesitonCounter + " questions");
@@ -40,33 +29,17 @@ window.onload = () => {
     it was ${userInputs[7]} it.`;
 
         if (numberOfQuestions == 0) {
-            alert("You answered all the questions");
-            console.log(originalStory);
+            alert("You answered all the questions. Let's read your story: ");
+
+            let divStory = document.getElementById("story");
+            divStory.textContent = originalStory;
+            // console.log(originalStory);
 
         }
     }
 
 
 }
-
-
-
-
-
-
-
-// console.log(inputPrompt);
-
-// console.log(originalStory);
-
-
-
-
-
-
-
-
-
 
 // ORIGINAL STORY
 // let orgStory = `It was a sunny summer day. Ana and I were excited to go camping at the 

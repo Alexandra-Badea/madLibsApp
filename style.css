@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #f3d5ba;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.start-btn {
+    padding: 10px 20px;
+    border-radius: 14px;
+    border: none;
+    font-size: 24px;
+    background:linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
+	background-color:#3d94f6;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px #000;
+}
+
+#story {
+    width: 80%;
+    margin: 20px auto;
+    font-size: 18px;
+}
